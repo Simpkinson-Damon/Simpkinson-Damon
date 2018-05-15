@@ -17,7 +17,7 @@ function demoOne(x, y, target) {
   var newNode = "";
   var newText = "";
   var destination = "";
-  for (var i = 0; i < y; i++) {
+  for (var i = 0; i <= y; i++) {
     result = x + " x " + i + " = " + x*i;
     newNode = document.createElement("p");
     newText = document.createTextNode(result);
