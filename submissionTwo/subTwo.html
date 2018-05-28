@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Damon Simpkinson Submission Number Two</title>
+    <link rel="stylesheet" type="text/css" href="subTwo.css">
+    <script type="text/javascript" src="subTwo.js"></script>
+</head>
+<body>
+    <div>
+        <a href="../index.html">Return Home</a>
+    </div>
+    <div>
+        <h1>Learn Tae Kwon Do Korean Terminology</h1>
+        <p>The recording volume is not the same for each video,<br/>
+           some may need to be turned up or down.</p>
+        <p>This exercise allows the user to select a Tae Kwon Do belt color<br/>
+           and will change the background color to match the selected belt<br/>
+           color.  A new element will be created (removing any existing element<br/>
+           first if necessary) that includes a video with the correct terminology<br/>
+           a student would need to learn for that belt test</p>
+        <p>Videos courtesy Han's White Tiger Tae Kwon Do, West Chester, OH</p>
+        <p>DOM manipulation, Manipulate CSS properties with JS, HTML5 tags</p>
+        <select id="belts" name="belts">
+            <option value="white" onclick="vidPicker('terminologyVid', 'white')">White Belt</option>
+            <option value="yellow" onclick="vidPicker('terminologyVid', 'yellow')">Yellow Belt</option>
+            <option value="orange" onclick="vidPicker('terminologyVid', 'orange')">Orange Belt</option>
+            <option value="green" onclick="vidPicker('terminologyVid', 'green')">Green Belt</option>
+            <option value="blue" onclick="vidPicker('terminologyVid', 'blue')">Blue Belt</option>
+            <option value="purple" onclick="vidPicker('terminologyVid', 'purple')">Purple Belt</option>
+        </select>
+    </div>
+    <br/>
+    <table id="vidBackground" height="400px" width="100%">
+        <tr valign="middle" align="center">
+            <td id="terminologyVid">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

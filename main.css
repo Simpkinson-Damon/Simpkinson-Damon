@@ -1,8 +1,21 @@
 table, th, td {
-  border: 1px solid black;
-  padding: 10px;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 body {
-  margin: 50px;
+    background-color: rgb(215, 215, 215);
+    margin: 50px;
+}
+
+.basic {
+    color: red;
+}
+
+.working {
+    color: yellow;
+}
+
+.skilled {
+    color: green;
 }

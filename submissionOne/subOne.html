@@ -1,29 +1,31 @@
 <!doctype html>
 <html>
 <head>
-  <title>First Submission for Damon Simpkinson</title>
-  <script type="text/javascript" src="subOne.js"></script>
+    <meta charset="utf-8"/>
+    <title>First Submission for Damon Simpkinson</title>
+    <script type="text/javascript" src="subOne.js"></script>
 </head>
 <body>
-  <a href="../index.html">Return Home</a>
-  <div id="demoOne">
+<a href="../index.html">Return Home</a>
+<div id="demoOne">
     <h1>A simple demonstration of creating, destroying and recreating a div in HTML using JS</h1>
     <p>This demonstration will print the first y multiples of number x</p>
     <p>Enter a number for both X and Y and press the 'Click Me' button</p>
     <p>This involves 2 functions, the first will clear the previous results display<br/>
-       if there is one.  The second function will create a display of the results<br/>
-       and append it to the division that maintains the display</p>
+        if there is one. The second function will create a display of the results<br/>
+        and append it to the division that maintains the display</p>
     <label for "numFirst">Enter a Number (x):
-      <input type="text" id="numX" name="numFirst" size="4">
+    <input type="text" id="numX" name="numFirst" size="4">
     </label>
     <label for "numSecond">Enter the number of multiples to display (y):
-      <input type="text" id="numY" name="numSecond" size="4">
+    <input type="text" id="numY" name="numSecond" size="4">
     </label>
     <button onclick="demoOne(document.getElementById('numX').value,
                              document.getElementById('numY').value,
-                             'demoOneDisplay')">Click Me</button>
+                             'demoOneDisplay')">Click Me
+    </button>
     <div id="demoOneDisplay">
     </div>
-  </div>
+</div>
 </body>
 </html>
