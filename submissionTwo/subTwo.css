@@ -9,9 +9,13 @@
     border-width: 2px;
 }
 
+table {
+    transition: width 4s, height 2s;
+    transition-delay: 1s;
+    transition-timing-function: linear;
+}
+
 table:hover {
     height: 500px;
     width: 800px;
-    transition: width 6s, height 3s;
-    transition-delay: 1s;
 }
