@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Damon Simpkinson Submission Number Three</title>
+    <link rel="stylesheet" type="text/css" href="subThree.css">
+    <!-- There are some skills I've already demonstrated where I am now
+    using JQUERY to simplify the code.  I think I limited this to appending
+    new dom elements, I still used vanilla JS for pretty much everything
+    else even if I have demonstrated it previously.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="subThree.js"></script>
+</head>
+<body>
+    <div>
+        <a href="../index.html">Return Home</a>
+    </div>
+    <p align="center">Here is a demonstration of a few of the Standard JS Events</p>
+    <table align="center">
+        <tr>
+            <th>Button</th>
+            <th>Counter</th>
+        </tr>
+        <tr>
+            <td><button id="mouseOverButton" onmouseover="countMouseOver()">
+                Touch Me With Your Mouse</button></td>
+            <td><h3 id="mouseOverCounter"></h3></td>
+        </tr>
+        <tr>
+            <td><button id="mouseRollButtonOne" onmousemove="countMouseMove()">
+                Roll Your Mouse Over Me</button></td>
+            <td><h3 id="mouseRollCounter"></h3></td>
+        </tr>
+        <tr>
+            <td><button id="countReset" onclick="resetMouseCount()">
+                Click Me to Reset Your Mouse Counts</button></td>
+            <td><h3 id="mouseReset"></h3></td>
+        </tr>
+    </table>
+    <hr/>
+    <div align="center">
+        <image id="balloons" src="balloons.jpg" style="width:864px; height:574px;"></image><br/>
+        <button id="increaseSize" onclick="increaseImgSize()">Click here to make image larger</button>
+        <button id="decreaseSize" onclick="decreaseImgSize()">Click here to make image smaller</button>
+    </div>
+    <hr/>
+    <div id="raceTrack">
+        <div id="raceCar">
+        </div>
+    </div>
+    <div id="carData">
+    </div>
+    <p>Fill in car data below and push "Add Your Car" button to add it<br/>
+       to the car object.  New car objects will be displayed in a table<br/>
+       in the center.  When you are ready to remove cars from your<br/>
+       collection select them with the checkbox and push the button<br/>
+       to remove them.</p>
+    Make:<input type="text" id="carMake"><br/>
+    Model:<input type="text" id="carModel"><br/>
+    Year:<input type="text" id="carYear"><br/>
+    Color:<input type="text" id="carColor"><br/>
+    <br/>
+    <div align="center">
+    <button id="addCar" onclick="addCar()">Add Your Car</button>
+    <button id="delCar" onclick="delCar()">Select Cars to Remove<br/>and Click Button</button>
+    </div>
+    </div>
+</body>
+</html>
