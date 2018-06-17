@@ -23,12 +23,12 @@ button {
     transition-timing-function: linear;
 }
 
-#mouseRollButtonTwo {
+#mouseRollButtonTwo:hover {
     height: 400px;
     transition-timing-function: ease;
 }
 
-#mouseRollButtonThree {
+#mouseRollButtonThree:hover {
     width: 300px;
     height:300px;
     transition-timing-function: ease-in-out;
