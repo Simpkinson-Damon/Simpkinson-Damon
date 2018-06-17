@@ -103,10 +103,10 @@ function driveCar(color) {
   document.getElementById("raceCar").style.backgroundColor = color;
   let vPos = 15;
   let hPos = 0;
-  let move = setInterval(movement, 3);
+  let move = setInterval(movement, 10);
   function movement() {
     if (hPos < 2500) {
-      hPos ++;
+      hPos = hPos + 2;
       car.style.left = hPos + 'px';
       car.style.top = vPos + 'px';
     } else {
