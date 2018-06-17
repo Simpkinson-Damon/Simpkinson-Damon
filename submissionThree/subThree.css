@@ -18,14 +18,35 @@ button {
     position: absolute;
 }
 
+#mouseRollButtonOne {
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    transition: 4s;
+}
+
 #mouseRollButtonOne:hover {
     width: 400px;
     transition-timing-function: linear;
 }
 
+#mouseRollButtonTwo {
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    transition: 4s;
+}
+
 #mouseRollButtonTwo:hover {
     height: 400px;
     transition-timing-function: ease;
+}
+
+#mouseRollButtonThree {
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    transition: 4s;
 }
 
 #mouseRollButtonThree:hover {
