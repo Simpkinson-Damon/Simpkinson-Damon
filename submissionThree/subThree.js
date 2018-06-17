@@ -14,7 +14,7 @@ function countMouseMove() {
   mouseRollCount++;
   mouseRollIDCounter++;
   document.getElementById("mouseRollCounter").innerHTML = mouseRollCount;
-  if(mouseRollIDCounter === 100){
+  if(mouseRollIDCounter === 250){
     if(document.getElementById("mouseRollButtonOne")) {
       document.getElementById("mouseRollButtonOne").id = "mouseRollButtonTwo";
     } else if (document.getElementById("mouseRollButtonTwo")) {
