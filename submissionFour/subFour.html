@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Damon Simpkinson Submission Number Four</title>
+    <link rel="stylesheet" type="text/css" href="subThree.css">
+    <!-- There are some skills I've already demonstrated where I am now
+    using JQUERY to simplify the code.  I think I limited this to appending
+    new dom elements, I still used vanilla JS for pretty much everything
+    else even if I have demonstrated it previously.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="subFour.js"></script>
+</head>
+<body>
+<div>
+    <a href="../index.html">Return To Home Page</a>
+</div>
+<div align="center">
+<h3>Here is a demonstration of object creation and storage using JavaScript</h3>
+    <p>In the input box below enter a series of numbers separated by commas.  Once done click the<br/>
+       "Generate Graph" button.  The numbers you entered will be saved to session storage and a new<br/>
+       page will open where the numbers will be recalled and bar chart object will be generated<br>
+       using the canvas tag</p>
+</div><br/><br/>
+<div align="center">
+    <label for="nums">Enter Your Numbers Separated by Commas</label>
+    <input id="nums" type="text" maxlength="40" onblur="saveUserInput()">
+</div>
+<div align="center"><input type="button" onclick="location.href='subFourPageTwo.html';" value="Generate Graph"></div>
+</body>
+</html>
