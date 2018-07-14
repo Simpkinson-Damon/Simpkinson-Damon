@@ -20,24 +20,24 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height,color){
   ctx.restore();
 }
 
-var Barchart = function(options){
+let Barchart = function(options){
   this.options = options;
   this.canvas = options.canvas;
   this.ctx = this.canvas.getContext("2d");
   this.colors = options.colors;
 
   this.draw = function(){
-    var maxValue = 0;
+    let maxValue = 0;
     for (item in this.options.data){
       maxValue = Math.max(maxValue,this.options.data[item]);
     }
-    var canvasActualHeight = this.canvas.height - this.options.padding * 2;
-    var canvasActualWidth = this.canvas.width - this.options.padding * 2;
+    let canvasActualHeight = this.canvas.height - this.options.padding * 2;
+    let canvasActualWidth = this.canvas.width - this.options.padding * 2;
 
     //drawing the grid lines
-    var gridValue = 0;
+    let gridValue = 0;
     while (gridValue <= maxValue){
-      var gridY = canvasActualHeight * (1 - gridValue/maxValue) + this.options.padding;
+      let gridY = canvasActualHeight * (1 - gridValue/maxValue) + this.options.padding;
       drawLine(
         this.ctx,
         0,
@@ -46,7 +46,6 @@ var Barchart = function(options){
         gridY,
         this.options.gridColor
       );
-
       //writing grid markers
       this.ctx.save();
       this.ctx.fillStyle = this.options.gridColor;
@@ -54,17 +53,16 @@ var Barchart = function(options){
       this.ctx.font = "bold 10px Arial";
       this.ctx.fillText(gridValue, 10,gridY - 2);
       this.ctx.restore();
-
       gridValue+=this.options.gridScale;
     }
 
     //drawing the bars
-    var barIndex = 0;
-    var numberOfBars = Object.keys(this.options.data).length;
-    var barSize = (canvasActualWidth)/numberOfBars;
+    let barIndex = 0;
+    let numberOfBars = Object.keys(this.options.data).length;
+    let barSize = (canvasActualWidth)/numberOfBars;
     for (item in this.options.data){
-      var val = this.options.data[item];
-      var barHeight = Math.round( canvasActualHeight * val/maxValue) ;
+      let val = this.options.data[item];
+      let barHeight = Math.round( canvasActualHeight * val/maxValue) ;
       drawBar(
         this.ctx,
         this.options.padding + barIndex * barSize,
@@ -115,7 +113,7 @@ function generateRandomColor() {
 function generateBarChart() {
   let userNums = sessionStorage.getItem("savedNums");
   let nums = userNums.split(",");
-  var chartCanvas = document.getElementById("chart");
+  let chartCanvas = document.getElementById("chart");
   chartCanvas.width = 500;
   chartCanvas.height = 500;
   let colors = [];
@@ -123,19 +121,18 @@ function generateBarChart() {
     colors.push(generateRandomColor());
   }
 
-  var myChart = new Barchart(
+  let myChart = new Barchart(
     {
       canvas:chartCanvas,
       seriesName:"User Numbers",
       padding:20,
-      gridScale:5,
+      gridScale:10,
       gridColor:"#aaaaaa",
       data:nums,
       colors:colors
     }
   );
+  console.log(nums);
   myChart.draw();
-  console.log("drawing barchart");
-  console.log(myChart);
 }
 
